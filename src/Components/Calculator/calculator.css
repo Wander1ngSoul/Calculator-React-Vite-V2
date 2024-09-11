@@ -1,0 +1,92 @@
+/* Общий стиль для калькулятора */
+.calculator {
+    width: 300px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Стиль для дисплея */
+.display {
+    width: 92.2%;
+    height: 50px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 10px;
+    font-size: 24px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+/* Стиль для кнопок */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #d0d0d0, #c0c0c0);
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Стиль для кнопок операций */
+button[data-operation] {
+    background: linear-gradient(135deg, #ff8c00, #ffa500);
+    color: white;
+}
+
+button[data-operation]:hover {
+    background: linear-gradient(135deg, #ffa500, #ff8c00);
+}
+
+/* Стиль для кнопки "=" */
+button[data-equals] {
+    background: linear-gradient(135deg, #4caf50, #66bb6a);
+    color: white;
+}
+
+button[data-equals]:hover {
+    background: linear-gradient(135deg, #66bb6a, #4caf50);
+}
+
+/* Стиль для кнопки "C" */
+button[data-clear] {
+    background: linear-gradient(135deg, #f44336, #e57373);
+    color: white;
+}
+
+button[data-clear]:hover {
+    background: linear-gradient(135deg, #e57373, #f44336);
+}
+
+/* Стиль для центрирования калькулятора на странице */
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
